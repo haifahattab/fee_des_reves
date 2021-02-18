@@ -39,3 +39,4 @@ Route::resource('Users', 'UserController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Auth::routes();
