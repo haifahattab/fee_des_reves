@@ -1,0 +1,577 @@
+    /* HTML5 display-role reset for older browsers */
+    
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    /************ GENERAL STYLES **********/
+    /************ Fonts ***********/
+    /************ Colors *********/
+    
+    body {
+        font-style: 62, 5%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        color: #4b4a4a;
+    }
+    /*
+* === GENERAL STYLES SHARED WITH PAGES
+*/
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.9rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+    }
+    
+    h5 {
+        font-size: 1.2rem;
+    }
+    
+    .h4__color {
+        font-size: 1.4rem;
+        color: #0e2113;
+        text-transform: uppercase;
+    }
+    
+    .header {
+        width: 100%;
+        z-index: 9999;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    .logo {
+        height: 150px;
+    }
+    
+    .header__scroll .header__logo {
+        height: 100px;
+    }
+    
+    .header__scroll .nav__list {
+        margin: 0.5rem auto;
+    }
+    
+    .page-content {
+        padding-top: 11.5rem;
+    }
+    
+    .button {
+        border-radius: 10px;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        background-color: #5D2267;
+        color: white;
+    }
+    
+    .button:hover {
+        background-color: #fff;
+        color: #5D2267;
+        border: 2px solid #5D2267;
+    }
+    
+    .nav__link {
+        margin: auto 0.7rem;
+        font-size: 1.1rem;
+    }
+    
+    .nav__link:link,
+    .nav__link:visited {
+        text-decoration: none;
+        color: #f9f7f7;
+    }
+    
+    .nav__link:active {
+        color: #5D2267;
+        text-decoration: none;
+    }
+    
+    .main-content__wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .text__heading {
+        margin-bottom: 2rem;
+    }
+    
+    .footer {
+        background: linear-gradient(to bottom right, #0e2113, #563635);
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        color: #f9f7f7;
+    }
+    
+    .footer__text {
+        line-height: 28px;
+    }
+    
+    .footer__text h4 {
+        color: #A0A083;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .footer__text p {
+        font-size: 1.1rem;
+    }
+    
+    .footer__column {
+        margin-top: 1.7rem;
+    }
+    
+    .footer__column:first-of-type {
+        margin-top: 0;
+    }
+    
+    .copy {
+        font-size: 0.8rem;
+        opacity: 0.7;
+        margin-top: 3rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.44);
+        padding-top: 1.2rem;
+    }
+    
+    .created {
+        font-size: 0.8rem;
+        opacity: 0.7;
+        margin-top: 1rem;
+    }
+    /*********** HOMEPAGE STYLES *********/
+    /************* hero image *************/
+    
+    .header--home {
+        box-shadow: none;
+        background: rgba(14, 8, 1, 0.87);
+    }
+    
+    .hero {
+        background-image: url("../images/CC.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .nav__list {
+        display: flex;
+        margin: 1rem auto;
+    }
+    
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 4rem 0rem;
+        position: absolute;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+    
+    .hero__text h1 {
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        color: #f9f7f7;
+    }
+    
+    .header__button {
+        background: transparent;
+        color: #f9f7f7;
+        border: 2px solid #f9f7f7;
+        margin-top: 2rem;
+        transition: 0.3s ease;
+    }
+    
+    .header__button:hover {
+        background: #f9f7f7;
+        color: #4b4a4a;
+    }
+    /*
+* === mission section===
+*/
+    
+    .mission {
+        margin: 5rem auto;
+    }
+    
+    .mission__text {
+        background: #f9f7f7;
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        padding: 3rem;
+        line-height: 2.3rem;
+    }
+    
+    .mission__img {
+        background-image: url("../images/couple2.jpeg");
+        background-position: center center;
+        background-size: cover;
+        align-self: flex-end;
+        height: 30rem;
+    }
+    /*
+* === icon tiles section===
+*/
+    
+    .main-tiles h3 {
+        margin: 6rem auto 2rem auto;
+    }
+    
+    .main-tiles h4 {
+        display: inline-block;
+        color: #5D2267;
+        margin: 2rem auto;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid white;
+    }
+    
+    .main-tiles p {
+        font-size: 1.1rem;
+    }
+    
+    .icon-tiles__tile {
+        padding: 4rem 2rem 6rem 2rem;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .icon-tiles__tile:nth-child(odd) h4 {
+        border-bottom: 1px solid #5D2267;
+    }
+    
+    .icon-tiles__tile:nth-child(even) {
+        background: #5D2267;
+    }
+    
+    .icon-tiles__tile:nth-child(even) h4,
+    .icon-tiles__tile:nth-child(even) p {
+        color: white;
+    }
+    
+    .icon-tiles__img {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 80px;
+    }
+    
+    .icon-tiles__img-one {
+        background-image: url("../icons/bouquet.svg");
+    }
+    
+    .icon-tiles__img-two {
+        background-image: url("../icons/church-hover.svg");
+    }
+    
+    .icon-tiles__img-three {
+        background-image: url("../icons/wedding-cake.svg");
+    }
+    
+    .icon-tiles__img-four {
+        background-image: url("../icons/camera-hover.svg");
+        height: 70px;
+    }
+    /*
+* === SECTION PORTFOLIO ===
+*/
+    
+    .portfolio h3 {
+        margin-top: 3rem;
+    }
+    
+    .img {
+        height: 200px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    /*
+* === CONTACT PAGE STYLES ===
+*/
+    
+    .contact {
+        margin-top: 15%;
+    }
+    
+    .input-submit {
+        cursor: pointer;
+    }
+    
+    .img-form {
+        height: 100%;
+    }
+    
+    .image-form {
+        margin-left: -3%;
+        background-image: url("../images/couple-heart.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 70px;
+        color: black;
+        font: bold 24px/1 sans-serif;
+    }
+    
+    .form {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        background: #f9f7f7;
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        height: 70%;
+        font: 10px bold;
+    }
+    /********** SIGNIN *************/
+    
+    .inscription {
+        margin-top: 15%;
+    }
+    
+    .img__signin {
+        background-image: url("../images/couple2.jpeg");
+        background-position: center center;
+        background-size: cover;
+        height: 40rem;
+        margin-left: -3%;
+    }
+    /*********** LOGIN **************/
+    
+    .connexion {
+        margin-top: 15%;
+    }
+    
+    .img__connexion {
+        background-image: url("../images/img18.jpeg");
+        background-size: cover;
+        height: 30rem;
+        margin-left: -3%;
+    }
+    /********** FORUM **************/
+    
+    .forum {
+        margin-top: 15%;
+    }
+    
+    .forum h2 {
+        margin-bottom: 10px;
+        color: #5D2267;
+    }
+    
+    .forum a {
+        border-radius: 10px;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        background-color: #5D2267;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .forum a:hover {
+        background-color: white;
+        color: #5D2267;
+        border: 1px solid #5D2267;
+    }
+    
+    .forum2 {
+        margin-top: 13%;
+    }
+    
+    .forum2 .is-connected {
+        margin-left: 60%;
+    }
+    
+    .forum2 .is-connected a:hover {
+        text-decoration: none;
+        color: #5D2267;
+        position: fixed;
+    }
+    /*
+* === MEDIA QUERIES ===
+*/
+    
+    @media screen and (max-width: 880px) {
+        .timeline {
+            margin: 0 2rem 5rem 2rem;
+        }
+        .timeline__container {
+            width: 100%;
+            margin-left: 1rem;
+        }
+        .timeline__right__container {
+            left: 0;
+            margin-top: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+        .timeline::after {
+            left: -18px;
+            width: 5px;
+        }
+        .timeline__container::after {
+            left: -45px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    @media screen and (min-width: 881px) {
+        .footer__inner-wrapper {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .hero__text h1 {
+            font-size: 2.9rem;
+        }
+        .nav__link {
+            font-size: 1.5rem;
+        }
+        .button {
+            font-size: 1.5rem;
+        }
+        .banner {
+            height: 30rem;
+        }
+        .banner h3 {
+            font-size: 2.5rem;
+        }
+        .timeline__left__container {
+            margin-left: -2rem;
+        }
+        .timeline__left__container::before {
+            top: 12px;
+            left: 395px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #f9f7f7;
+        }
+        .timeline__right__container {
+            margin-left: 2rem;
+        }
+        .contact-details__inner-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .contact-details__inner-wrapper h5 {
+            margin-top: .6rem;
+        }
+        .contact-details__column p {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media screen and (min-width: 1087px) {
+        .hero__text {
+            top: 55%;
+        }
+        .social--hero {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            flex-direction: column;
+            margin-right: 4rem;
+            width: auto;
+        }
+        .mission {
+            display: flex;
+            justify-content: center;
+            height: 40rem;
+        }
+        .mission__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 45%;
+            margin-right: -3rem;
+            height: 30rem;
+            font-size: 1.3rem;
+        }
+        .mission__img {
+            width: 45%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        .main-tiles p {
+            color: transparent;
+        }
+        .icon-tiles__wrapper {
+            display: flex;
+        }
+        .icon-tiles__tile {
+            margin: 0.5rem;
+            width: 25%;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+        .icon-tiles__tile:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            width: 30%;
+        }
+        .icon-tiles__img-two {
+            background-image: url("../assets/icons/church.svg");
+        }
+        .icon-tiles__img-four {
+            background-image: url("../assets/icons/camera.svg");
+            height: 70px;
+        }
+        .icon-tiles__one:hover .icon-tiles__img-one {
+            background-image: url("../assets/icons/bouquet-hover.svg");
+        }
+        .icon-tiles__two:hover .icon-tiles__img-two {
+            background-image: url("../assets/icons/church-hover.svg");
+        }
+        .icon-tiles__three:hover .icon-tiles__img-three {
+            background-image: url("../assets/icons/wedding-cake-hover.svg");
+        }
+        .icon-tiles__four:hover .icon-tiles__img-four {
+            background-image: url("../assets/icons/camera-hover.svg");
+        }
+        .icon-tiles__tile:nth-child(odd) h4 {
+            border-bottom: none;
+        }
+        .icon-tiles__tile:nth-child(odd):hover h4 {
+            border-bottom: 1px solid #f9f7f7;
+        }
+        .icon-tiles__tile:nth-child(even) {
+            background: none;
+        }
+        .icon-tiles__tile:nth-child(even) h4 {
+            color: #5D2267;
+        }
+        .icon-tiles__tile {
+            border-radius: 10px;
+        }
+        .icon-tiles__tile:hover {
+            background: #5D2267;
+        }
+        .icon-tiles__tile:hover h4,
+        .icon-tiles__tile:hover p {
+            color: #f9f7f7;
+        }
+        .icon-tiles__camera .img {
+            height: 30px;
+        }
+        .form__label {
+            font-size: 1.5rem;
+        }
+    }

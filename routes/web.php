@@ -14,5 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("accueil");
 });
+Route::get('contact',function(){
+    return view("contact");
+});
+Route::get('forum',function(){
+    return view("forum");
+});
+Route::get('inscription',function(){
+    return view('inscription');
+});
+Route::get('services',function(){
+    return view('/#.$service');
+});
+Route::get('portfolio',function(){
+    return view('/#.$portfolio');
+});
+Route::get('connexion',function(){
+    return view('connexion');
+});
+
+Route::resource('Users', 'UserController');
+
+Route::get('/home', 'HomeController@index')->name('home');
+

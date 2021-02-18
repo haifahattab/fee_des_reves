@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Coment;
+use App\Coment;//Appel la class Coment
 use Illuminate\Http\Request;
 
 class ComentController extends Controller
@@ -14,7 +14,8 @@ class ComentController extends Controller
      */
     public function index()
     {
-        //
+        $coments = Coment::orderby('id', 'asc')->paginate(10);//fonction qui permet la pagination
+        return view('coments.index',['coments'=> $coments]);//lister les commentaires
     }
 
     /**
@@ -24,7 +25,7 @@ class ComentController extends Controller
      */
     public function create()
     {
-        //
+        return view('coments.create');
     }
 
     /**
@@ -35,7 +36,8 @@ class ComentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $coment= Coment::create($request->all());
+        return redirect('coments')->with('status', 'Votre commenataire a été bien ajouté!');
     }
 
     /**
