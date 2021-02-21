@@ -31,8 +31,13 @@ Route::post('contact',function(){
 });
 
 Route::get('forum',function(){
+    if ( auth()->check()){
+        return redirect('home');
+    }else{
     return view("forum");
+    }
 });
+
 Route::get('inscription',function(){
     return view('inscription');
 });

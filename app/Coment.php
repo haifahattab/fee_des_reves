@@ -9,6 +9,7 @@ class Coment extends Model
     protected $fillable = [
         'coment',
         'image',
+        'sujet',
         'user_id',
     ];
 

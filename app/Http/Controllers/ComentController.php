@@ -46,6 +46,7 @@ class ComentController extends Controller
             $coment->save();
         }
         return redirect('home')->with('status', 'Votre commentaire a été bien ajouté!');
+
     }
 
     /**
@@ -99,9 +100,10 @@ class ComentController extends Controller
      * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Coment $coment)
+    public function destroy($id)
     {
-        $coment->delete();
+        $deletecoment = Coment::findOrfail($id);
+        $deletecoment->delete();
         return redirect('home')->with('status', 'Votre commentaire a été bien supprimé!');
 
     }

@@ -394,6 +394,7 @@
     
     .forum2 {
         margin-top: 13%;
+        margin-bottom: 10%;
     }
     
     .forum2 .is-connected {
@@ -403,7 +404,6 @@
     .forum2 .is-connected a:hover {
         text-decoration: none;
         color: #5D2267;
-        position: fixed;
     }
     /***************Reset password****************/
     
