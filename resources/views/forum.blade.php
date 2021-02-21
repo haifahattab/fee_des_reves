@@ -14,7 +14,7 @@
 @guest
 <a href="{{ url('login') }}">Créer une discussion</a>
 @endguest
-</div> 
+</div>
 <div class="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, non! Rem quae illum aperiam itaque libero iure minima beatae tempore reprehenderit quisquam. Alias laboriosam eius debitis perferendis, consectetur earum cupiditate.</div>
 </div>
 </section>

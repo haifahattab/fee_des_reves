@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view("accueil");
 });
+
 Route::get('contact',function(){
     return view("contact");
 });
+
+/** */
+Route::post('contact',function(){
+    $data = request(['name', 'email', 'phone', 'message']);
+    Mail::to('haifaelabed29@gmail.com')
+    ->send(new \App\Mail\ContactMail($data));
+    return redirect('contact')->with('flash', 'Votre demande a été envoyer avec succée');
+});
+
 Route::get('forum',function(){
     return view("forum");
 });
@@ -35,7 +46,8 @@ Route::get('connexion',function(){
     return view('connexion');
 });
 
-Route::resource('Users', 'UserController');
+//Route::get('/coments/create', 'ComentController@create');
+Route::resource('coments', 'ComentController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

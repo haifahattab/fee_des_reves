@@ -3,25 +3,29 @@
 @extends('layouts.headerFooter')
 @section('content')
 <!------------------- contact ------------------->
-
+<div class="container-fluid">
     <section class='contact'>
         <h2 class="mb-5">CONTACTEZ-NOUS</h2>
         
         <div class="row mb-5">
         <div class="offset-lg-2 col-lg-4 col-sm-12 form ">
-        <form method="post" action="login.php" class="Form-group p-3 rounded">
+        @if(session('flash'))
+            <h3 class="text-success">{{ session('flash') }}</h3>
+        @endif
+        <form method="post" action="contact" class="Form-group p-3 rounded">
+            @csrf
             <h4>Envoyez-nous votre demande, nous allons l'étudier et vous répondons dans les meilleurs délais</h4>
             <div class="form-group mt-5">
-                <input type="text" class="form-control" name="nom" id="imail" placeholder="Nom & Prénom">
+                <input type="text" class="form-control" name="name" id="nom" placeholder="Nom & Prénom" required>
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" id="imail" placeholder="Adresse email">
+                <input type="email" class="form-control" name="email" id="imail" placeholder="Adresse email" required>
             </div>
             <div class="form-group">
-                <input type="phone" class="form-control" name="text" id="imail" placeholder="N° de téléphone">
+                <input type="phone" class="form-control" name="phone" id="phone" placeholder="N° de téléphone" required>
             </div>
             <div class="form-group">
-                <textarea class="form-control" name="message" id="imail" placeholder="Message ou demande de devis"></textarea>
+                <textarea class="form-control" name="message" id="message" placeholder="Message ou demande de devis" required></textarea>
             </div>
             <button name="submit" class="mb-2 mr-0 button">Valider</button>
             
@@ -43,4 +47,5 @@
         </div>
 
     </section>
+</div>
 @endsection

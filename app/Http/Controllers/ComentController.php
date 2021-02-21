@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Coment;//Appel la class Coment
+use App\user;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ComentController extends Controller
 {
@@ -14,8 +15,7 @@ class ComentController extends Controller
      */
     public function index()
     {
-        $coments = Coment::orderby('id', 'asc')->paginate(10);//fonction qui permet la pagination
-        return view('coments.index',['coments'=> $coments]);//lister les commentaires
+        return view('home');
     }
 
     /**
@@ -37,7 +37,15 @@ class ComentController extends Controller
     public function store(Request $request)
     {
         $coment= Coment::create($request->all());
-        return redirect('coments')->with('status', 'Votre commenataire a été bien ajouté!');
+
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $filename = time().'.'.$image->getClientOriginalExtension();
+            Image::make($image)->save(storage_path('app/public/images/'.$filename));
+            $coment->image = $filename;
+            $coment->save();
+        }
+        return redirect('home')->with('status', 'Votre commentaire a été bien ajouté!');
     }
 
     /**
@@ -48,7 +56,7 @@ class ComentController extends Controller
      */
     public function show(Coment $coment)
     {
-        //
+        return view('coments.show',compact('coment'));
     }
 
     /**
@@ -59,7 +67,7 @@ class ComentController extends Controller
      */
     public function edit(Coment $coment)
     {
-        //
+        return view ('coments.edit', compact('coment'));
     }
 
     /**
@@ -71,7 +79,18 @@ class ComentController extends Controller
      */
     public function update(Request $request, Coment $coment)
     {
-        //
+
+            $coment->update($request->all());
+    
+            if($request->hasFile('image')){
+                $image = $request->file('image');
+                $filename = time().'.'.$image->getClientOriginalExtension();
+                Image::make($image)->save(storage_path('app/public/images/'.$filename));
+                $coment->image = $filename;
+                $coment->save();
+            }
+            return redirect('home')->with('status', 'Votre commentaire a été bien modifié!');
+
     }
 
     /**
@@ -82,6 +101,8 @@ class ComentController extends Controller
      */
     public function destroy(Coment $coment)
     {
-        //
+        $coment->delete();
+        return redirect('home')->with('status', 'Votre commentaire a été bien supprimé!');
+
     }
 }
