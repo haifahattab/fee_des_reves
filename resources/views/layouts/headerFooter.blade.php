@@ -22,7 +22,7 @@
             <header class="header header--home fixed-top">
             <div class='row'>
                 <div class="col-lg-2">
-                <img class="header__logo logo ml-5" src="assets/logo/logo.png" alt="logo fée des rêves">
+                <img class="header__logo logo ml-5" src="{{ url('./assets/logo/logo.png')}}" alt="logo fée des rêves">
                 </div>
                 <div class="offset-lg-2 col-lg-8">
                 <nav class="mt-5">
@@ -57,7 +57,7 @@
         <footer class="footer">
             <div class="footer__inner-wrapper">
                 <div class="footer__column">
-                    <img class="logo logo--footer" src="assets/logo/logo.png" alt="logo"> </div>
+                    <img class="logo logo--footer" src="{{ url('./assets/logo/logo.png')}}" alt="logo"> </div>
                 <div class="footer__column">
                     <div class="footer__text">
                         <h4>CONTACTEZ-NOUS</h4>

@@ -40,10 +40,10 @@
         <button name="submit" class="mb-2 mr-0 button">Valider</button><br>
         @if (Route::has('password.request'))
         <a class="btn btn-link" href="{{ route('password.request') }}">
-            {{ __('Forgot Your Password?') }}
+            {{ __('Mot de passe oublié?') }}
         </a>
         @endif        
-        <a href="{{ route('register') }}">{{ __('S\'inscrire') }}</a>
+        <a class="btn btn-link" href="{{ route('register') }}">{{ __('S\'inscrire') }}</a>
         
     </form>
 </div>

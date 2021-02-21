@@ -405,6 +405,12 @@
         color: #5D2267;
         position: fixed;
     }
+    /***************Reset password****************/
+    
+    .reset {
+        margin-top: 17%;
+        margin-bottom: 25%;
+    }
     /*
 * === MEDIA QUERIES ===
 */
