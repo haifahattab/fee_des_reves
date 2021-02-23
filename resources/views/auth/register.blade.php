@@ -42,9 +42,10 @@
         
             <div class="form-group">
         
-            <input type="checkbox" name="condition" class="mb-5"> Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement.<br>
+            <input type="checkbox" name="condition" required class="mb-5"> Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement.<br>
             <button name="confirm" class="button">Valider</button>  
-            </div>  
+            </div> 
+           
             </form>
         </div>
         <div class="col-lg-4 img__signin mt-5 mb-5">

@@ -31,16 +31,18 @@
             
         </form>
         </div>
-        <div class="col-lg-5 col-sm-12 p-5 image-form ">  
-                <h4>contact@feedesreves.com</h4><br>
-                <h4>(+33)7 12 34 56 78</h4><br>
+        <div class="col-lg-5 col-sm-12 p-5 image-form "> 
+            <div class="form_text">
+                <h3>contact@feedesreves.com</h3><br>
+                <h3>(+33)7 12 34 56 78</h3><br>
                 <p>Envoyez-nous un e-mail ou appelez-nous pour discuter de vos idées et besoins. 
                 Nous proposerons et préparerons une offre adaptée à vos besoins.
                 </p><br>
             <p>Ou bien rencontrons-nous dans notre bureau afin que nous puissions réaliser vos rêves. 
                 Si vous avez des inspirations - décoration, fleurs / couleurs - apportez-les avec vous!
                 </p><br>
-                <h4>06600 ANTIBES, FRANCE</h4>
+                <h3>06600 ANTIBES, FRANCE</h3>
+            </div>
                 
         </div>
        

@@ -15,6 +15,6 @@ class Coment extends Model
 
     public function user()
     {
-        return $this->belongs('App\User');
+        return $this->belongsToMany('App\User');
     }
 }

@@ -6,7 +6,7 @@
     <section class="hero">
 
         <div class="hero__text">
-                <h1 class="heading-1">Confiez-nous votre rêves</h1>
+                <h1 class="heading-1">Confiez-nous vos rêves</h1>
                 <a href="#portfolio" class="button__link ">
                     <button class="header__button button">Nos créations</button>
                 </a>
@@ -15,6 +15,7 @@
 
     <!-------------------- section mission ------------>
     <section class="mission">
+        <div class="row">
         <div class="mission__text">
             <div class="mission__text__heading">
                 <h4 class="h4__color">QUELQUE CHOSE À PROPOS DE NOTRE</h4>
@@ -25,6 +26,7 @@
             <p>Nous prenons tous les arrangements et les questions formelles de vos épaules, afin que vous puissiez simplement vous détendre et attendre ces beaux moments à venir.</p>
         </div>
         <div class="mission__img"></div>
+        </div>
     </section>
 
     <!------------------- section services ------------------>

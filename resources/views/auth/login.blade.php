@@ -6,7 +6,7 @@
 <section class="connexion">
 <h2>Se connecter</h2>
 <div class="row">
-<div class="offset-lg-2 col-lg-4 col-sm-12 form">
+<div class="offset-lg-2 col-lg-4 col-sm-12 form pt-4">
 <form method="POST" action="{{ route('login') }}" class="Form-group p-3 mb-5 rounded">
 @csrf
  

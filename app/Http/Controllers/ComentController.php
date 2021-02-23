@@ -78,18 +78,10 @@ class ComentController extends Controller
      * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Coment $coment)
+    public function update(Request $request, Coment $coment,Coment $id)
     {
-
+            $coment = $request::findOrFail($id);
             $coment->update($request->all());
-    
-            if($request->hasFile('image')){
-                $image = $request->file('image');
-                $filename = time().'.'.$image->getClientOriginalExtension();
-                Image::make($image)->save(storage_path('app/public/images/'.$filename));
-                $coment->image = $filename;
-                $coment->save();
-            }
             return redirect('home')->with('status', 'Votre commentaire a été bien modifié!');
 
     }

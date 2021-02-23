@@ -65,9 +65,5 @@ document.addEventListener("DOMContentLoaded", function() {
         distance: '200px',
         viewFactor: 0.3
     });
-    sr.reveal('.contact-details', {
-        duration: 1200,
-        origin: 'left',
-        distance: '200px',
-    });
+
 });

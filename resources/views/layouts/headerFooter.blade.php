@@ -6,12 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
-    <a href="https://icons8.com/icon/111482/stylo-à-bille">Stylo à bille icon by Icons8</a>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
     <script src="{{ url('./assets/js/app.js') }}" defer></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ url('./assets/css/main.css') }}">
@@ -19,37 +16,33 @@
 </head>
 
 <body>
-    <div>
-        <!-- hero image section -->
-            <header class="header header--home fixed-top">
-            <div class='row'>
-                <div class="col-lg-2">
-                <img class="header__logo logo ml-5" src="{{ url('./assets/logo/logo.png')}}" alt="logo fée des rêves">
-                </div>
-                <div class="offset-lg-2 col-lg-8">
-                <nav class="mt-5">
-                    <ul class="nav__list nav__list--home">
-                        <li class="nav__item nav__item--home">
-                            <a href="{{ url('/') }}" class="nav__link">Accueil</a>
-                        </li>
-                        <li class="nav__item nav__item--home">
-                        <a href="{{ url('/') }}#service" class="nav__link">Services</a>
-                        </li>
-                        <li class="nav__item nav__item--home">
-                            <a href="{{ url('/') }}#portfolio" class="nav__link">Portfolio</a>
-                        </li>
-                        <li class="nav__item nav__item--home">
-                            <a href="{{ url('/contact') }}" class="nav__link">Contactez-nous</a>
-                        </li>
-                        <li class="nav__item nav__item--home">
-                            <a href="{{ url('/forum') }}" class="nav__link">Forum</a>
-                        </li>
-                    </ul>
+        <header class="header header--home fixed-top">
+                <nav class="navbar navbar-expand-md">
+                        <img class="header__logo logo ml-5" src="assets/logo/logo.png" alt="logo fée des rêves">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="https://img.icons8.com/android/34/ffffff/menu.png"/> </button> 
+                    <div class="collapse navbar-collapse nav_list" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                                <li>
+                                    <a href="{{ url('/') }}" class="nav__link">Accueil</a>
+                                </li>
+                                <li>
+                                <a href="{{ url('/') }}#service" class="nav__link">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('/') }}#portfolio" class="nav__link">Portfolio</a>
+                                </li>
+                                <li class="nav__item nav__item--home">
+                                    <a href="{{ url('/contact') }}" class="nav__link">Contactez-nous</a>
+                                </li>
+                                <li class="nav__item nav__item--home">
+                                    <a href="{{ url('/forum') }}" class="nav__link">Forum</a>
+                                </li>
+                        </ul>
+                    </div>
                 </nav>
-                </div>
-                </div>
-
-            </header>
+            
+        </header>
 
             
 
@@ -57,17 +50,18 @@
 
 
         <footer class="footer">
-            <div class="footer__inner-wrapper">
-                <div class="footer__column">
-                    <img class="logo logo--footer" src="{{ url('./assets/logo/logo.png')}}" alt="logo"> </div>
-                <div class="footer__column">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-2 col-sm-12">
+                    <img class="logo logo--footer" src="{{ url('./assets/logo/logo.png')}}" alt="logo"> 
+                </div>
+                <div class="col-lg-4 col-sm-12">
                     <div class="footer__text">
                         <h4>CONTACTEZ-NOUS</h4>
                         <p>contact@feedesreves.com</p>
                         <p>(+33)7 12 34 56 78</p>
                     </div>
                 </div>
-                <div class="footer__column">
+                <div class="col-lg-4 col-sm-12">
                     <div class="footer__text">
                         <h4>06600 ANTIBES <br> FRANCE</h4>
                     </div>
