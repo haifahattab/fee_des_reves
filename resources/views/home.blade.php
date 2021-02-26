@@ -98,11 +98,11 @@
 
 </div>
 <!-----------------------Delete Modal Coment------------------------------->
-<div class="modal fade modal-top" id="deleteComent" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade modal-top" id="deleteComent.{{$coment->id}}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-body">
-            <form action="{{url('Coment/delete/'.$coment->id)}}" method="post" id="deleteform">
+            <form action="{{route('coment.destroy',$coment->id)}}" method="post" id="deleteform">
             @csrf
             @method('DELETE')
             <input type="hidden" name="_method" value="delete" id="delete_id" >
@@ -139,8 +139,8 @@
 
         });
 
-        $('#deleteComent').on('click',function(){
-            $('#deletComent').modal('show');
+        $('#deleteComent').on('click',function(){           
+            $('#deletComent.{{$coment->id}}').modal('show');
             
         });
 

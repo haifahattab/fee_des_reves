@@ -11,9 +11,11 @@
                     <button class="header__button button">Nos créations</button>
                 </a>
             </div>
-    </section><div class="main-content__wrapper">
+    </section>
 
     <!-------------------- section mission ------------>
+    <div class="container-fluid">
+    <div class="main-content__wrapper">
     <section class="mission">
         <div class="row">
         <div class="mission__text">
@@ -32,27 +34,35 @@
     <!------------------- section services ------------------>
     <section class="main-tiles" id="service">
         <h3>NOS SERVICES</h3>
-        <div class="icon-tiles__wrapper">
-            <div class="icon-tiles__tile icon-tiles__one">
-                <div class="icon-tiles__img icon-tiles__img-one"></div>
-                <h4>Décoration élégante</h4>
-                <p>Belle décoration de bon goût qui convient à vos préférences et à votre concept de cérémonie</p>
+        <div class="row">
+            <div class="col-lg-3 col-sm-12">
+                <div class="icon-tiles__tile icon-tiles__one">
+                    <div class="icon-tiles__img icon-tiles__img-one"></div>
+                    <h4>Décoration élégante</h4>
+                    <p>Belle décoration de bon goût qui convient à vos préférences et à votre concept de cérémonie</p>
+                </div>
             </div>
-            <div class="icon-tiles__tile icon-tiles__two">
-                <div class="icon-tiles__img icon-tiles__img-two"></div>
-                <h4>Arrangements de cérémonie</h4>
-                <p>Représentation officielle à l'église et arrangements officiels avec des lieux de mariage en plein air
-                </p>
+            <div class="col-lg-3 col-sm-12">
+                <div class="icon-tiles__tile icon-tiles__two">
+                    <div class="icon-tiles__img icon-tiles__img-two"></div>
+                    <h4>Arrangements de cérémonie</h4>
+                    <p>Représentation officielle à l'église et arrangements officiels avec des lieux de mariage en plein air
+                    </p>
+                </div>
             </div>
-            <div class="icon-tiles__tile icon-tiles__three">
-                <div class="icon-tiles__img icon-tiles__img-three"></div>
-                <h4>Restauration & Gâteaux</h4>
-                <p>Des plats haut de gamme et des confiseurs récompensés pour offrir le meilleur goût à vous et à vos invités</p>
+            <div class="col-lg-3 col-sm-12">
+                <div class="icon-tiles__tile icon-tiles__three">
+                    <div class="icon-tiles__img icon-tiles__img-three"></div>
+                    <h4>Restauration & Gâteaux</h4>
+                    <p>Des plats haut de gamme et des confiseurs récompensés pour offrir le meilleur goût à vous et à vos invités</p>
+                </div>
             </div>
-            <div class="icon-tiles__tile icon-tiles__four">
-                <div class="icon-tiles__img icon-tiles__img-four"></div>
-                <h4>photographie et vidéographie</h4>
-                <p>Laissez-nous nous occuper de filmer votre journée spéciale sur des photographies uniques et des vidéos originales</p>
+            <div class="col-lg-3 col-sm-12">
+                <div class="icon-tiles__tile icon-tiles__four">
+                    <div class="icon-tiles__img icon-tiles__img-four"></div>
+                    <h4>photographie et vidéographie</h4>
+                    <p>Laissez-nous nous occuper de filmer votre journée spéciale sur des photographies uniques et des vidéos originales</p>
+                </div>
             </div>
         </div>
     </section>
@@ -74,24 +84,30 @@
             <div class="card">
                 <img class="card-img img" src="./assets/images/img11.jpeg" alt="Card image cap">
             </div>
+
             <div class="card">
                 <img class="card-img img" src="./assets/images/img12.jpeg" alt="Card image cap">
             </div>
+
             <div class="card">
                 <img class="card-img img" src="./assets/images/img5.jpeg" alt="Card image cap">
             </div>
+            
             <div class="card">
                 <img class="card-img img" src="./assets/images/img6.jpeg" alt="Card image cap">
             </div>
+
             <div class="card">
                 <img class="card-img img" src="./assets/images/img8.jpeg" alt="Card image cap">
             </div>
+
             <div class="card">
                 <img class="card-img img" src="./assets/images/img7.jpeg" alt="Card image cap">
             </div>
         </div>
         
         </section>
+    </div>
     </div>
 
     @endsection

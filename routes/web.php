@@ -27,7 +27,7 @@ Route::post('contact',function(){
     $data = request(['name', 'email', 'phone', 'message']);
     Mail::to('haifaelabed29@gmail.com')
     ->send(new \App\Mail\ContactMail($data));
-    return redirect('contact')->with('flash', 'Votre demande a été envoyer avec succée');
+    return redirect('contact')->with('flash', 'Votre demande a été envoyée avec succès');
 });
 
 Route::get('forum',function(){
@@ -55,7 +55,7 @@ Route::get('connexion',function(){
 Route::resource('coments', 'ComentController');
 
 Route::get('edit','ComentController@update');
-Route::delete('Coment/delete/{id}','ComentController@destroy');
+Route::delete('Coment/{id}','ComentController@destroy')->name('coment.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

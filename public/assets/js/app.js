@@ -1,18 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const header = document.getElementsByTagName("header")[0];
-    const hero = document.getElementsByClassName("hero")[0];
-
-    function pageScroll() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            header.classList.add("header__scroll");
-        } else {
-            header.classList.add("header")
-            header.classList.remove("header__scroll");
-        }
-    }
-    window.onscroll = function() { pageScroll() };
-
     //Scroll Reveal 
     window.sr = ScrollReveal();
     sr.reveal('.heading-1', {
@@ -38,7 +25,19 @@ document.addEventListener("DOMContentLoaded", function() {
         distance: '100px',
         viewFactor: 0.7
     });
-    sr.reveal('.icon-tiles__one', {
+    sr.reveal('.form__contact', {
+        duration: 1500,
+        origin: 'top',
+        distance: '100px',
+        viewFactor: 0.6
+    });
+    sr.reveal('.image-form', {
+        duration: 1500,
+        origin: 'bottom',
+        distance: '100px',
+        viewFactor: 0.7
+    });
+    sr.reveal('.icon-tiles__tile', {
         duration: 1000,
         origin: 'bottom',
         distance: '200px',

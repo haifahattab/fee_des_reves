@@ -108,7 +108,7 @@
     }
     
     .nav_list ul li {
-        padding: 30px;
+        padding: 10px;
     }
     
     .logo {
@@ -220,11 +220,7 @@
     }
     
     .mission__img {
-        background-image: url("../images/couple2.jpeg");
-        background-position: center center;
-        background-size: cover;
-        align-self: flex-end;
-        height: 30rem;
+        display: none;
     }
     /*
 * === icon tiles section===
@@ -326,8 +322,8 @@
     }
     
     .form_text {
-        margin-top: 80px;
-        margin-left: 10px;
+        margin-top: 50px;
+        text-align: center;
     }
     
     .form {
@@ -441,28 +437,20 @@
 * === MEDIA QUERIES ===
 */
     
-    @media screen and (min-width: 881px) {
-        .hero__text h1 {
-            font-size: 2.9rem;
-        }
-        .nav__link {
-            font-size: 1.5rem;
-        }
-        .button {
-            font-size: 1.5rem;
-        }
-    }
-    
     @media screen and (min-width: 1087px) {
         .nav_list {
-            margin-left: 25%;
+            margin-left: 17%;
         }
         .nav_list ul {
-            height: 100px;
+            height: 70px;
         }
-        .logo {
-            height: 150px;
+        .header__logo {
+            height: 100px;
             width: 220px;
+        }
+        .logo--footer {
+            width: 220px;
+            height: 150px;
         }
         .hero__text {
             top: 55%;
@@ -474,31 +462,47 @@
             font-size: 1.3rem;
         }
         .mission__img {
+            background-image: url("../images/couple2.jpeg");
+            background-position: center center;
+            background-size: cover;
+            height: 30rem;
             margin-top: 10%;
             width: 45%;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            display: block;
+        }
+        .hero__text h1 {
+            font-size: 2.9rem;
+        }
+        .nav__link {
+            font-size: 1.5rem;
+        }
+        .button {
+            font-size: 1.5rem;
+        }
+        .form_text {
+            margin-left: 10px;
+            margin-top: 80px;
         }
         .main-tiles p {
             color: transparent;
         }
-        .icon-tiles__wrapper {
-            display: flex;
-        }
         .icon-tiles__tile {
             margin: 0.5rem;
-            width: 25%;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            height: 450px;
+            width: 350px;
         }
         .icon-tiles__tile:hover {
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-            width: 30%;
+            width: 360px;
+            background: #5D2267;
         }
         .icon-tiles__img-two {
             background-image: url("../icons/church.svg");
         }
         .icon-tiles__img-four {
             background-image: url("../icons/camera.svg");
-            height: 70px;
         }
         .icon-tiles__one:hover .icon-tiles__img-one {
             background-image: url("../icons/bouquet-hover.svg");
@@ -518,17 +522,8 @@
         .icon-tiles__tile:nth-child(odd):hover h4 {
             border-bottom: 1px solid #f9f7f7;
         }
-        .icon-tiles__tile:nth-child(even) {
-            background: none;
-        }
-        .icon-tiles__tile:nth-child(even) h4 {
-            color: #5D2267;
-        }
         .icon-tiles__tile {
             border-radius: 10px;
-        }
-        .icon-tiles__tile:hover {
-            background: #5D2267;
         }
         .icon-tiles__tile:hover h4,
         .icon-tiles__tile:hover p {
