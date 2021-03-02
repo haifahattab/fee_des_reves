@@ -371,20 +371,12 @@
         margin-bottom: 18%;
     }
     
-    .table_forum {
-        width: 900px;
+    .text__reply {
+        margin-right: 150px;
     }
     
-    .table_forum tr {
-        text-align: left;
-    }
-    
-    .table_forum tr>td:nth-child(2) {
-        width: 500px;
-    }
-    
-    .text {
-        margin-left: 30%;
+    .forum_img {
+        border: none;
     }
     
     .forum h2 {
@@ -422,11 +414,23 @@
         text-decoration: none;
         color: #5D2267;
     }
+    
+    .btn {
+        border: none;
+    }
+    
+    .reply_input {
+        display: none;
+    }
+    
+    .reply_input_block {
+        display: block;
+    }
     /***************Reset password****************/
     
     .reset {
         margin-top: 17%;
-        margin-bottom: 25%;
+        margin-bottom: 30%;
     }
     /*****************Modal****************/
     

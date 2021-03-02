@@ -25,18 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         distance: '100px',
         viewFactor: 0.7
     });
-    sr.reveal('.form__contact', {
-        duration: 1500,
-        origin: 'top',
-        distance: '100px',
-        viewFactor: 0.6
-    });
-    sr.reveal('.image-form', {
-        duration: 1500,
-        origin: 'bottom',
-        distance: '100px',
-        viewFactor: 0.7
-    });
+
     sr.reveal('.icon-tiles__tile', {
         duration: 1000,
         origin: 'bottom',

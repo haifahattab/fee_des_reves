@@ -29,52 +29,32 @@
             <option value="Photographie et Vidéographie">Photographie et Vidéographie</option>
             <option value="Autres">Autres</option>
         </select>
-        <input type="file" name="image" class="form-control mb-3" value="Ajouter une image">
+        <input type="file" name="image" class="form-control mb-3 forum_img" value="Ajouter une image">
 
         <input type="text" hidden name="user_id" value="{{Auth::user()->id}}"><!-------user_id------>
         <input type="submit" name="envoyer" value="Ajouter" class="button">
 
     </form>
 </div> 
+        @if(session('status_delete'))
+            <h4 class="text-success">{{ session('status_delete') }}</h4>
+        @endif
+        @if(session('status_update'))
+            <h4 class="text-success">{{ session('status_update') }}</h4>
+        @endif
 @foreach($coments as $coment)
 @auth
-<div class="coment offset-lg-1 col-lg-10">
-<table id="dataTable" class="table table-hover table_forum">
-    <tr>
-        <th>{{$coment->sujet}}</th>
-        <td hidden>{{$coment->id}}</td>
-        <td>{{$coment->coment}}<br><br>
-            <a type="submit" name="button" class="text">Répondre</a>
-        </td>
-        @if($coment->user_id == Auth::user()->id)
-        <td>
-            <a type='submit' name="button" data-coment_id="{{$coment->id}}" data-coment="{{$coment->coment}}" data-toggle="modal" data-target="#editComent">
-                <img src="https://img.icons8.com/nolan/27/ball-point-pen.png"/>
-            </a>
-        </td>
-        <td>
-            <a type='submit' name="button" data-toggle="modal" data-coment_id="{{$coment->id}}"  data-target="#deleteComent">
-                <img src="https://img.icons8.com/nolan/27/delete-forever.png"/>
-            </a>
-        </td>
-        @endif
-        <td>{{$coment->created_at}}</td>
-    </tr>
-</table>
-</div>
-
-
 <!-----------------------Edit Modal Coment------------------------------>
-<div class="modal fade modal-top" id="editComent" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade modal-top" id="editComent_{{ $coment->id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form id="editForm" class="form-group formdialo rounded">
+                <form action="{{route('coments.update', $coment->id)}}" method="POST" id="editForm" class="form-group formdialo rounded">
                 @csrf 
                 {{method_field('PATCH')}}   
                     <div class="modal-body">
                         <h3>Modification de votre message</h3>
-                        <input type="hidden" id="coment_id" >
-                        <input type="text" class="form-control" id="coment" name="coment" class="mb-3" >
+                        <input type="hidden" id="{{ $coment->id }}">
+                        <input type="text" class="form-control" id="modal__coment" value="{{ $coment->coment }}" name="coment" class="mb-3" >
                         <br>
                         <select name="sujet" class="mb-3 form-control">
                             <option value="">S'il vous choisir votre sujet</option>
@@ -95,59 +75,53 @@
                 </form>
             </div>
         </div>
-
 </div>
-<!-----------------------Delete Modal Coment------------------------------->
-<div class="modal fade modal-top" id="deleteComent.{{$coment->id}}" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-body">
-            <form action="{{route('coment.destroy',$coment->id)}}" method="post" id="deleteform">
-            @csrf
-            @method('DELETE')
-            <input type="hidden" name="_method" value="delete" id="delete_id" >
-                        <h4>Etes vous sur de vouloir supprimer ? </h4>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                        <button type="submit" name="deletcoment" class="btn btn-danger">Valider</a>
-                    </div>
+<div class="coment table table-hover table_forum">
+<div class="row"">
+    <div class="offset-lg-1 col-lg-3">{{$coment->sujet}}</div>
+    <div hidden>{{$coment->id}}</div>
+    <div class="col-lg-8">
+        <div class="row">
+            <div class="col-5"><strong>{{ $coment->user->name }}</strong> {{$coment->created_at}}</div>
+            <div class="col-1">
+            @if($coment->user_id == Auth::user()->id)
+                <button type='submit' name="button" class="btn edit_btn" data-coment="{{ json_encode($coments) }}" data-toggle="modal" data-target="#editComent_{{ $coment->id }}">
+                    <img src="https://img.icons8.com/nolan/27/ball-point-pen.png"/>
+                </button>
+            @endif
+            </div>
+            <div class="col-1">
+            @if($coment->user_id == Auth::user()->id)
+                <form action="{{route('coments.destroy', $coment->id)}}" method="POST" onsubmit="return confirm('Étes-vous sûr de vouloir supprimer votre commentaire ?');">
+                    @csrf
+                    @method('delete')
+                    <button type='submit' name="button" class="btn">
+                        <img src="https://img.icons8.com/nolan/27/delete-forever.png"/>
+                    </button>
                 </form>
+                @endif
             </div>
         </div>
+        <div class="col-lg-5 col-sm-8">{{$coment->coment}}<br><br>
+            <form method="POST">
+                <input type="text" name="reply" id="input_reply_{{ $coment->id }}" class="form-control reply_input">
+                <a type="submit" name="button" id="reply_{{ $coment->id }}" onClick="show_input()" class="text__reply text-muted">Répondre</a>
+            </form>
+        </div>
+        </div>
 </div>
-
+</div>
 @endauth
 @endforeach
-<!------------------------------ script -------------------------------->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.css"/>
-<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<script>
-     $(document).ready(function(){
-        $('#editComent').on('click',function(e){
-            var button = $(event.relatedTarget)
-            var coment_id = button.data('coment_id')
-            var coment = button.data('coment')
-            var modal = $(this)
-            modal.find('.modal-body #id').val(coment_id);
-            modal.find('.modal-body #coment').val(coment);
-
-            $('#editComent').modal('show');
-
-        });
-
-        $('#deleteComent').on('click',function(){           
-            $('#deletComent.{{$coment->id}}').modal('show');
-            
-        });
-
-    });
-</script>
-
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+     function show_input(){
+            $('#input_reply').addClass('reply_input_block');
+            $('#input_reply').removeClass('reply_input');    
+
+    };
+</script>
 </div>
 
 @endsection

@@ -54,9 +54,6 @@ Route::get('connexion',function(){
 //Route::get('/coments/create', 'ComentController@create');
 Route::resource('coments', 'ComentController');
 
-Route::get('edit','ComentController@update');
-Route::delete('Coment/{id}','ComentController@destroy')->name('coment.destroy');
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();

@@ -78,11 +78,10 @@ class ComentController extends Controller
      * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Coment $coment,Coment $id)
+    public function update(Request $request, Coment $coment)
     {
-            $coment = $request::findOrFail($id);
             $coment->update($request->all());
-            return redirect('home')->with('status', 'Votre commentaire a été bien modifié!');
+            return redirect('home')->with('status_update', 'Votre commentaire a été bien modifié!');
 
     }
 
@@ -92,11 +91,10 @@ class ComentController extends Controller
      * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Coment $coment)
     {
-        $deletecoment = Coment::findOrfail($id);
-        $deletecoment->delete();
-        return redirect('home')->with('status', 'Votre commentaire a été bien supprimé!');
+        $coment->delete();
+        return back()->with('status_delete', 'Votre commentaire a été bien supprimé!');
 
     }
 }
