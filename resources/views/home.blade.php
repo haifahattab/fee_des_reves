@@ -20,8 +20,8 @@
 <div class="m-5">
     <form enctype="multipart/form-data" action="{{route('coments.store')}}" method="POST">
     @csrf
-        <input type="text" name="coment" class="form-control mb-3" placeholder="Bonjour, j'ai besoin de vos conseils...">
-        <select name="sujet" class="form-control mb-3">
+        <input type="text" name="coment" class="form-control mb-3" placeholder="Bonjour, j'ai besoin de vos conseils..." required>
+        <select name="sujet" class="form-control mb-3" required>
             <option value="">S'il vous choisir votre sujet</option>
             <option value="Restauration & Gateaux">Restauration & Gateaux</option>
             <option value="Décoration">Décoration</option>
@@ -65,7 +65,6 @@
                             <option value="Autres">Autres</option>
                         </select>
                         <br>
-                        <input type="file" class="form-control forum_img" name="image" id="image">
                         <input type="text" hidden name="user_id" value="{{Auth::user()->id}}">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>

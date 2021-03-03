@@ -18,8 +18,13 @@ class CreateComentsTable extends Migration
             $table->longtext('coment');
             $table->string('image')->default('image.jpg');
             $table->timestamps();
-
-        });
+                $table->unsignedBigInteger('user_id')->nullable();
+                $table->foreign('user_id')->references('id')->on('users')
+                
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            });
     }
 
     /**

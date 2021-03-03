@@ -42,7 +42,7 @@
             </div>
         
         
-            <input type="checkbox" name="condition" required class="mb-2 h5"> Je reconnais avoir pris connaissance des conditions d’utilisation<a href="#"> condition </a> et y adhère totalement.<br>
+            <input type="checkbox" name="condition" required class="mb-2 h5" > Je reconnais avoir pris connaissance des conditions d’utilisation<a href="#"> condition </a> et y adhère totalement.<br>
             <button name="confirm" class="button mt-2">Valider</button>  
            
             </form>
