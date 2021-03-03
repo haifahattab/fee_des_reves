@@ -29,7 +29,7 @@
             <option value="Photographie et Vidéographie">Photographie et Vidéographie</option>
             <option value="Autres">Autres</option>
         </select>
-        <input type="file" name="image" class="form-control mb-3 forum_img" value="Ajouter une image">
+        <input type="file" hidden name="image" class="form-control mb-3 forum_img" value="Ajouter une image">
 
         <input type="text" hidden name="user_id" value="{{Auth::user()->id}}"><!-------user_id------>
         <input type="submit" name="envoyer" value="Ajouter" class="button">
@@ -114,14 +114,6 @@
 @endauth
 @endforeach
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>
-     function show_input(){
-            $('#input_reply').addClass('reply_input_block');
-            $('#input_reply').removeClass('reply_input');    
-
-    };
-</script>
 </div>
 
 @endsection

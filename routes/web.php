@@ -53,7 +53,9 @@ Route::get('connexion',function(){
 
 //Route::get('/coments/create', 'ComentController@create');
 Route::resource('coments', 'ComentController');
+Route::resource('users', 'UsersController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/users','UsersController@index')->name('users');
 
 Auth::routes();

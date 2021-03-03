@@ -3,6 +3,7 @@
 @section('content')
     
 <!---------------------- Inscription --------------------->
+<div class="container">
 <section class="inscription">
     <h2> Inscription </h2>
     <div class="row">
@@ -46,9 +47,10 @@
            
             </form>
         </div>
-        <div class="col-lg-4 img__signin mt-5 mb-5">
+        <div class="col-lg-4 img__signin sm-none mt-5 mb-5">
         </div>
         </div>
 </section>
+</div>
 
     @endsection

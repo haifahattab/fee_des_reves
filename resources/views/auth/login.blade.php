@@ -3,6 +3,7 @@
 @section('content')
 
 <!-------------------- Connexion ------------------>
+<div class="container">
 <section class="connexion">
 <h2>Se connecter</h2>
 <div class="row">
@@ -50,4 +51,5 @@
 <div class="col-lg-4 img__connexion mb-5"></div>
 </div>
 </section>
+</div>
 @endsection
