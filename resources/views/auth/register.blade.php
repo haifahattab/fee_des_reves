@@ -40,11 +40,9 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmer le mot de passe">
             </div>
         
-            <div class="form-group">
         
-            <input type="checkbox" name="condition" required class="mb-5"> Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement.<br>
-            <button name="confirm" class="button">Valider</button>  
-            </div> 
+            <input type="checkbox" name="condition" required class="mb-2 h5"> Je reconnais avoir pris connaissance des conditions d’utilisation<a href="#"> condition </a> et y adhère totalement.<br>
+            <button name="confirm" class="button mt-2">Valider</button>  
            
             </form>
         </div>

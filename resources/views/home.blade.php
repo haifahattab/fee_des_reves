@@ -65,7 +65,7 @@
                             <option value="Autres">Autres</option>
                         </select>
                         <br>
-                        <input type="file" class="form-control" name="image" id="image">
+                        <input type="file" class="form-control forum_img" name="image" id="image">
                         <input type="text" hidden name="user_id" value="{{Auth::user()->id}}">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
